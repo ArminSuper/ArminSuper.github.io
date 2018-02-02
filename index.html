@@ -259,6 +259,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/用Github-Pages搭建一个博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Armin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Armin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/02/用Github-Pages搭建一个博客/" itemprop="url">用Github Pages搭建一个博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T21:46:05+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/02/用Github-Pages搭建一个博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/02/02/用Github-Pages搭建一个博客/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#用Github Pages搭建一个博客</p>
+<p>##Install node.js</p>
+<p>###<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载</a>node.js</p>
+<p>####Ubuntu<br>    1    解压　tar -xvf node-v8.9.4-linux-x64.tar.xz<br>    2    cd nnode-v8.9.4-linux-x64/bin<br>    3    sudo ln ./node /usr/local/bin/node<br>    4    sudo ln ./npm /usr/local/bin/npm</p>
+<pre><code>或者:
+1    sudo apt-get install nodejs-legacy nodejs
+2    sudo apt-get install npm
+</code></pre><p>####Windows<br>    下载安装即可(没亲测)</p>
+<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></h2><pre><code>$ npm install hexo-cli -g
+$ hexo init blog
+$ cd blog
+$ npm install
+</code></pre><h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置Hexo</a></h2><h3 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改<code>_config.yml</code></h3><p>我做了简单的修改(如下)<br>    title: (网站标题)<br>    subtitle: (网站副标题)<br>    description: (网站描述)<br>    author: (你的名字)<br>    language: zh-Hans<br>    timezone: (Hexo 默认使用你电脑的时区)<br>修改deploy<br>    type: git<br>    repo: (填你的仓库）<br>    branch: master</p>
+<p>###安装主题<br>这里我使用的是NexT主题<br><img src="https://raw.githubusercontent.com/ArminSuper/UNP/master/img/NexT.png" alt="NexT"></p>
+<pre><code>$ cd your-hexo-site
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><p>PS. 修改<code>站点配置文件</code>中的theme: next</p>
+<p>有三种Scheme选择</p>
+<pre><code>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白
+Mist - Muse 的紧凑版本，整洁有序的单栏外观
+Pisces - 双栏 Scheme，小家碧玉似的清新
+</code></pre><p>这里就不一一介绍啦(上面给出了链接)</p>
+<h2 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h2><p>黑色处填写你的Github用户名</p>
+<p><img src="https://raw.githubusercontent.com/ArminSuper/UNP/master/img/Github.png" alt="Github"></p>
+<p>然后在<code>站点配置文件</code>修改repo: (填你的仓库）</p>
+<p>PS. 上传hexo g -d即可(配置好SSH)</p>
+<p>可以绑定你自己的域名(无需备案)</p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>如下图配置即可</p>
+<p><img src="https://raw.githubusercontent.com/ArminSuper/UNP/master/img/jx.png" alt="解析"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -431,14 +612,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
