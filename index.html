@@ -363,20 +363,21 @@
       
         
           
-            <p>#用Github Pages搭建一个博客</p>
-<p>##Install node.js</p>
-<p>###<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载</a>node.js</p>
-<p>####Ubuntu<br>    1    解压　tar -xvf node-v8.9.4-linux-x64.tar.xz<br>    2    cd nnode-v8.9.4-linux-x64/bin<br>    3    sudo ln ./node /usr/local/bin/node<br>    4    sudo ln ./npm /usr/local/bin/npm</p>
-<pre><code>或者:
+            <h1 id="用Github-Pages搭建一个博客"><a href="#用Github-Pages搭建一个博客" class="headerlink" title="用Github Pages搭建一个博客"></a>用Github Pages搭建一个博客</h1><h2 id="Install-node-js"><a href="#Install-node-js" class="headerlink" title="Install node.js"></a>Install node.js</h2><h3 id="下载node-js"><a href="#下载node-js" class="headerlink" title="下载node.js"></a><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载</a>node.js</h3><h4 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h4><pre><code>1    解压　tar -xvf node-v8.9.4-linux-x64.tar.xz
+2    cd nnode-v8.9.4-linux-x64/bin
+3    sudo ln ./node /usr/local/bin/node
+4    sudo ln ./npm /usr/local/bin/npm
+
+或者:
 1    sudo apt-get install nodejs-legacy nodejs
 2    sudo apt-get install npm
-</code></pre><p>####Windows<br>    下载安装即可(没亲测)</p>
-<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></h2><pre><code>$ npm install hexo-cli -g
+</code></pre><h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><pre><code>下载安装即可(没亲测)
+</code></pre><h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></h2><pre><code>$ npm install hexo-cli -g
 $ hexo init blog
 $ cd blog
 $ npm install
 </code></pre><h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置Hexo</a></h2><h3 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改<code>_config.yml</code></h3><p>我做了简单的修改(如下)<br>    title: (网站标题)<br>    subtitle: (网站副标题)<br>    description: (网站描述)<br>    author: (你的名字)<br>    language: zh-Hans<br>    timezone: (Hexo 默认使用你电脑的时区)<br>修改deploy<br>    type: git<br>    repo: (填你的仓库）<br>    branch: master</p>
-<p>###安装主题<br>这里我使用的是NexT主题<br><img src="https://raw.githubusercontent.com/ArminSuper/UNP/master/img/NexT.png" alt="NexT"></p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>这里我使用的是NexT主题<br><img src="https://raw.githubusercontent.com/ArminSuper/UNP/master/img/NexT.png" alt="NexT"></p>
 <pre><code>$ cd your-hexo-site
 $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 </code></pre><p>PS. 修改<code>站点配置文件</code>中的theme: next</p>
