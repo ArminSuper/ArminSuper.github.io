@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="tensorflow," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="关于我其实也没什么好介绍的，嗯嗯，就这样。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="transpose函数12345678910111213141516171819202122232425262728import tensorflow as tfx = tf.constant([[[1,2,3,4],[5,6,7,8],[5,6,7,8]]                   ,[[9,12,13,14],[15,16,17,18],[5,6,7,8]]])#1代表二维数组的行，">
+<meta name="keywords" content="tensorflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tf.transpose">
+<meta property="og:url" content="http://yoursite.com/2018/05/02/tf-transpose/index.html">
 <meta property="og:site_name" content="Armin&#39;s blog">
-<meta property="og:description" content="关于我其实也没什么好介绍的，嗯嗯，就这样。">
+<meta property="og:description" content="transpose函数12345678910111213141516171819202122232425262728import tensorflow as tfx = tf.constant([[[1,2,3,4],[5,6,7,8],[5,6,7,8]]                   ,[[9,12,13,14],[15,16,17,18],[5,6,7,8]]])#1代表二维数组的行，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-02T09:49:46.000Z">
+<meta property="og:updated_time" content="2018-05-02T12:37:41.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="关于我其实也没什么好介绍的，嗯嗯，就这样。">
+<meta name="twitter:title" content="tf.transpose">
+<meta name="twitter:description" content="transpose函数12345678910111213141516171819202122232425262728import tensorflow as tfx = tf.constant([[[1,2,3,4],[5,6,7,8],[5,6,7,8]]                   ,[[9,12,13,14],[15,16,17,18],[5,6,7,8]]])#1代表二维数组的行，">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/02/tf-transpose/"/>
 
 
 
 
 
-  <title>about | Armin's blog</title>
+  <title>tf.transpose | Armin's blog</title>
   
 
 
@@ -250,34 +251,173 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/tf-transpose/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Armin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Armin's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>其实也没什么好介绍的，嗯嗯，就这样。</p>
-
+          <h1 class="post-title" itemprop="name headline">tf.transpose</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T20:30:39+08:00">
+                2018-05-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tensorflow/" itemprop="url" rel="index">
+                    <span itemprop="name">tensorflow</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="transpose函数"><a href="#transpose函数" class="headerlink" title="transpose函数"></a><strong>transpose函数</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">x = tf.constant([[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>],[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]]</span><br><span class="line">                   ,[[<span class="number">9</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>],[<span class="number">15</span>,<span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>],[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]]])</span><br><span class="line"><span class="comment">#1代表二维数组的行，2代表二维数组的列</span></span><br><span class="line">x_1 = tf.transpose(x, [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">x_2 = tf.transpose(x, [<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>])</span><br><span class="line">x_3 = tf.transpose(x, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">0</span>])</span><br><span class="line">sess = tf.Session()</span><br><span class="line"><span class="comment">#print(sess.run(x))</span></span><br><span class="line"><span class="comment">#print(x.shape)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#x_1 = tf.transpose(x, [0,1,2])</span></span><br><span class="line"><span class="comment">#print(sess.run(x_1))</span></span><br><span class="line">print(x_1.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment">#x_2 = tf.transpose(x, [1,0,2])</span></span><br><span class="line"><span class="comment">#print(sess.run(x_2))</span></span><br><span class="line">print(x_2.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment">#x_3 = tf.transpose(x, [1,2,0])</span></span><br><span class="line"><span class="comment">#print(sess.run(x_3))</span></span><br><span class="line">print(x_3.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#(2, 3, 4)</span></span><br><span class="line"><span class="comment">#(3, 2, 4)</span></span><br><span class="line"><span class="comment">#(3, 4, 2)</span></span><br></pre></td></tr></table></figure>
+<p>参考:<br>1.<a href="https://www.tensorflow.org/api_docs/python/tf/transpose" target="_blank" rel="noopener">tensorflow 官网</a></p>
+<p>2.<a href="https://www.cnblogs.com/studyDetail/p/6533316.html" target="_blank" rel="noopener">博客</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tensorflow/" rel="tag"># tensorflow</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/23/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -409,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于我"><span class="nav-number">1.</span> <span class="nav-text">关于我</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#transpose函数"><span class="nav-number">1.</span> <span class="nav-text">transpose函数</span></a></li></ol></div>
             
 
           </div>
