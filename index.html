@@ -271,6 +271,191 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/vim的简单配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Armin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Armin's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/31/vim的简单配置/" itemprop="url">vim的简单配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T19:02:16+08:00">
+                2018-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vim/" itemprop="url" rel="index">
+                    <span itemprop="name">vim</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="vim-的简单配置"><a href="#vim-的简单配置" class="headerlink" title="vim 的简单配置"></a>vim 的简单配置</h1><h2 id="vimrc-文件"><a href="#vimrc-文件" class="headerlink" title=".vimrc 文件"></a>.vimrc 文件</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> relativenumber  <span class="comment">"相对行号</span></span><br><span class="line"><span class="keyword">set</span> showmatch		<span class="comment">"显示括号配对情况</span></span><br><span class="line"><span class="keyword">set</span> autoread        <span class="comment">"Vim自动更新载入</span></span><br><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span>		<span class="comment">"tab </span></span><br><span class="line"><span class="keyword">set</span> softtabstop=<span class="number">4</span>	<span class="comment">"统一缩进</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span>			<span class="comment">"语法高亮</span></span><br><span class="line"><span class="keyword">filetype</span> <span class="keyword">on</span>			<span class="comment">"检测文件类型</span></span><br><span class="line"><span class="keyword">syntax</span> enable 		<span class="comment">"开启代码高亮</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"Vundle Section Start</span></span><br><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"><span class="keyword">filetype</span> off</span><br><span class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/Vundle.<span class="keyword">vim</span></span><br><span class="line"><span class="keyword">call</span> vundle#begin()</span><br><span class="line">Plugin <span class="string">'VundleVim/Vundle.vim'</span></span><br><span class="line">Plugin <span class="string">'vim-airline/vim-airline'</span></span><br><span class="line">Plugin <span class="string">'vim-airline/vim-airline-themes'</span></span><br><span class="line">Plugin <span class="string">'scrooloose/nerdtree'</span>, &#123; <span class="string">'on'</span>: <span class="string">'NERDTreeToggle'</span> &#125;</span><br><span class="line">Plugin <span class="string">'Valloric/YouCompleteMe'</span></span><br><span class="line"><span class="comment">" ADD YOUR PLUGIN</span></span><br><span class="line"><span class="keyword">call</span> vundle#end()</span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></span><br><span class="line"><span class="comment">"Vundle Section End</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:airline_theme</span>=<span class="string">'violet'</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:ycm_min_num_identifier_candidate_chars</span> = <span class="number">2</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:ycm_global_ycm_extra_conf</span> = <span class="string">'.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'</span></span><br></pre></td></tr></table></figure>
+<h2 id="一些插件"><a href="#一些插件" class="headerlink" title="一些插件"></a>一些插件</h2><h3 id="Vundle管理插件"><a href="#Vundle管理插件" class="headerlink" title="Vundle管理插件"></a><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">Vundle</a>管理插件</h3><p>1.clone </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</span><br></pre></td></tr></table></figure>
+<p>2.Configure Plugins</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/Vundle.<span class="keyword">vim</span></span><br><span class="line"><span class="keyword">call</span> vundle#begin()</span><br><span class="line">Plugin <span class="string">'VundleVim/Vundle.vim'</span></span><br><span class="line"><span class="keyword">call</span> vundle#end()            </span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span>    </span><br><span class="line"><span class="comment">"加入到.vimrc文件中</span></span><br><span class="line"><span class="comment">"安装插件,只要编辑.vimrc文件,然后:PluginInstall安装</span></span><br></pre></td></tr></table></figure>
+<h3 id="vim-airline"><a href="#vim-airline" class="headerlink" title="vim-airline"></a>vim-airline</h3><p>vim-airline is a statusline plugin for vim</p>
+<h4 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Plugin &apos;vim-airline/vim-airline&apos;</span><br><span class="line">Plugin &apos;vim-airline/vim-airline-themes&apos; &quot;vim-airline 的主题</span><br></pre></td></tr></table></figure>
+<h4 id="关于主题"><a href="#关于主题" class="headerlink" title="关于主题"></a>关于主题</h4><p>set in .vimrc, use <code>let g:airline_theme=&#39;&lt;theme&gt;&#39;</code>, e.g. <code>let g:airline_theme=&#39;simple&#39;</code></p>
+<p>可以去<a href="https://github.com/vim-airline/vim-airline/wiki/Screenshots" target="_blank" rel="noopener">Screenshots</a>找一个你喜欢的主题</p>
+<p><img src="https://raw.githubusercontent.com/ArminSuper/UNP/master/img/vim-airline_Screenshots.png" alt="IMG"></p>
+<h3 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h3><p>The NERDTree is a file system explorer for the Vim editor. </p>
+<p><img src="https://raw.githubusercontent.com/scrooloose/nerdtree/master/screenshot.png" alt="NERDTree"></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Plugin &apos;scrooloose/nerdtree&apos;, &#123; &apos;on&apos;: &apos;NERDTreeToggle&apos; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:NERDTree</code></td>
+<td>打开目录树</td>
+</tr>
+<tr>
+<td><code>:NERDTreeClose</code></td>
+<td>关闭目录树</td>
+</tr>
+<tr>
+<td><code>:NERDTreeToggle</code></td>
+<td>打开/关闭目录树</td>
+</tr>
+<tr>
+<td><code>:NERDTreeFind</code></td>
+<td>打开目录树并定位到当前文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="YouCompleteMe"><a href="#YouCompleteMe" class="headerlink" title="YouCompleteMe"></a><a href="https://github.com/Valloric/YouCompleteM" target="_blank" rel="noopener">YouCompleteMe</a></h3><p>a code-completion engine for Vim.</p>
+<p><img src="https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966" alt="YouCompleteMe GIF demo"></p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"详细文档一定要看github</span></span><br><span class="line">Plugin <span class="string">'Valloric/YouCompleteMe'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#YCM is a plugin with a compiled component. If you update YCM using Vundle and the ycm_core library APIs have changed (happens rarely), YCM will notify you to recompile it. You should then rerun the install process.</span></span><br><span class="line"><span class="comment">#Compiling YCM with semantic support for C-family languages:</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ~/.vim/bundle/YouCompleteMe</span><br><span class="line">./install.py --clang-completer</span><br><span class="line">Compiling YCM without semantic support <span class="keyword">for</span> C-family languages:</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ~/.vim/bundle/YouCompleteMe</span><br><span class="line">./install.py</span><br></pre></td></tr></table></figure>
+<p>END (更多的就慢慢的折腾吧==)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/tf-transpose/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -773,7 +958,7 @@ Pisces - 双栏 Scheme，小家碧玉似的清新
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -784,7 +969,7 @@ Pisces - 双栏 Scheme，小家碧玉似的清新
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -795,7 +980,7 @@ Pisces - 双栏 Scheme，小家碧玉似的清新
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
